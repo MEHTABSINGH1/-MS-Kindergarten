@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #00bcd4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00bcd4;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #00bcd4;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        button[type="submit"] {
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #008ba3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Class Registration</h1>
+        <form id="registration-form">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" required>
+
+            <button type="submit">Register</button>
+			<p class="footer">© 2023 Class Registration System</p>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("registration-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get form values
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+
+            // Display a confirmation message (for demonstration)
+            alert("Registration Successful!\n\nFirst Name: " + firstName + "\nLast Name: " + lastName + "\nEmail: " + email + "\nPhone Number: " + phoneNumber);
+
+            // You can send this data to a server for actual registration/storage.
+        });
+    </script>
+</body>
+</html>
